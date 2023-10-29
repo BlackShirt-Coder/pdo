@@ -1,5 +1,5 @@
 <?php
-require_once "database/dbGen.php";
+require_once "database/DAL.php";
 class index{
     public function __construct()
     {
@@ -11,8 +11,8 @@ class index{
 //        echo "<hr>";
 //        $db3=new dbGen();
 //        var_dump($db3);
-       $db= dbGen::getInstance();
-       $db->getConn();
+       $db= new DAL();
+
 //       var_dump($db1);
 //       echo "<hr>";
 //       $db2= dbGen::getInstance();
