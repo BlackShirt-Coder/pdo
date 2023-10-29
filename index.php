@@ -12,7 +12,8 @@ class index{
 //        $db3=new dbGen();
 //        var_dump($db3);
        $db= new DAL();
-
+       echo "<hr>";
+        $db->getSingleShop(2);
 //       var_dump($db1);
 //       echo "<hr>";
 //       $db2= dbGen::getInstance();
