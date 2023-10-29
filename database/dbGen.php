@@ -5,7 +5,8 @@ class dbGen{
     const DB_USER="root";
     const DB_PASS ="";
     private $conn;
-    public function __construct()
+    private static $instance;
+    private function __construct()
     {
        try{
            $this->conn=new PDO("mysql:host=".self::DB_HOST.";dbname=".self::DB_NAME,self::DB_USER,self::DB_PASS);
@@ -19,4 +20,15 @@ class dbGen{
        }
 
     }
+    public static function getInstance(){
+        if(!self::$instance){
+            self::$instance=new dbGen();
+        }
+
+        return self::$instance;
+    }
+    public function getConn(){
+        return $this->conn;
+    }
+
 }
