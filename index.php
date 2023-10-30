@@ -14,7 +14,13 @@ class index{
        $db= new DAL();
        echo "<hr>";
 //        $db->getSingleShop(2);
-        $db->getAllShop(1);
+        $items=[
+            ["Nokia", "192,168.4.100", "nokia", "123", 1],
+            ["One Plus", "192,168.5.100", "one plus", "123", 1],
+            ["Lenovo", "192,168.6.100", "lenovo", "123", 1]
+        ];
+//        $db->updateName("LG",21);
+        $db->multiDelete();
 //       var_dump($db1);
 //       echo "<hr>";
 //       $db2= dbGen::getInstance();
